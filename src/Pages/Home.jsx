@@ -1,11 +1,24 @@
+import Banner from "../components/Banner";
+import '../styles/Home.css'
+import logo from '../assets/logo_ivan.png';
+import banner from '../assets/univers.jpg'
+import CardSection from "../components/CardSection";
 
+function Home({datas}) {
 
-function Home() {
-  
+const BannerTitle = 'TRADUCTION - WEBDESIGN - FORMATION'
+const textBanner = 'Un service humain avant tout'
 
   return (
-    <div className="App bg-gradient">
-     <h2>projet</h2>
+    <div className="home page">
+     <Banner 
+     bannerImg={banner}
+     logo={logo}
+     text={textBanner}
+     title={BannerTitle}
+     />
+    <CardSection 
+    services={datas}/>
     </div>
   )
 }

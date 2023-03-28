@@ -4,20 +4,49 @@
     font-weight: 400;
     --primary: #411388;
     --secondary: #d45500;
+    --tertiary: #7a59ab;
     --dark: #1b1b1b;
     --light: #fcfbfc;
     --gradient: -webkit-linear-gradient(right top, #411388, #9964e9);
+    --regular: 0.8em;
+    --middle: 26px;
 }
 
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+.bg-secondary {
+    background: var(--secondary);
+}
+
+.bg-light {
+    background: var(--light);
+}
+
+.bg-dark {
+    background: var(--dark);
 }
 
 #root {
     background: var(--gradient);
 }
 
+/*width*/
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
 
 /*text-colors*/
 
@@ -35,4 +64,17 @@
 
 .text-light {
     color: var(--light);
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding-top: var(--middle);
+    padding-bottom: var(--middle);
+}
+
+@media (max-width: 600px) {
+    .w-50 {
+        width: 100%;
+    }
 }

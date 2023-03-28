@@ -1,0 +1,46 @@
+.banner {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.banner-logo {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.banner-text > h3,
+.banner-text > h4 {
+    text-align: center;
+    color: var(--light);
+}
+
+.banner-text {
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 17px;
+}
+
+@media (max-width: 600px) {
+    .banner {
+        width: 100%;
+        border-radius: 0;
+        height: 495px;
+    }
+}
