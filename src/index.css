@@ -1,0 +1,38 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    --primary: #411388;
+    --secondary: #d45500;
+    --dark: #1b1b1b;
+    --light: #fcfbfc;
+    --gradient: -webkit-linear-gradient(right top, #411388, #9964e9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    background: var(--gradient);
+}
+
+
+/*text-colors*/
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-light {
+    color: var(--light);
+}
