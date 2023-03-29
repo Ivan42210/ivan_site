@@ -5,7 +5,14 @@
     align-items: center;
 }
 
-.navbar-menu {
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.navbar-menu-hidden,
+.navbar-menu-show {
     display: flex;
     gap: 10px;
 }
@@ -35,4 +42,78 @@
     background: var(--light);
     text-align: center;
     box-shadow: 0 0 0 4px var(--tertiary);
+}
+
+.navbar-toggle-hidden,
+.navbar-toggle-show {
+    border: 2px solid var(--light);
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar-toggle-hidden > span,
+.navbar-toggle-show > span {
+    width: 80%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--light);
+    position: absolute;
+}
+
+.navbar-toggle-hidden > span:nth-child(1) {
+    top: 7px;
+}
+
+.navbar-toggle-hidden > span:nth-child(2) {
+    bottom: 7px;
+}
+
+.navbar-toggle-show > span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.navbar-toggle-show > span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.navbar-toggle-show > span:nth-child(3) {
+    transform: translateX(-120%);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar-header {
+        width: 100%;
+    }
+    .navbar-toggle-hidden,
+    .navbar-toggle-show {
+        display: flex;
+    }
+    .navbar-menu-hidden {
+        display: none;
+    }
+    .navbar-menu-show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 100%;
+        background: var(--primary);
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        padding: var(--regular);
+        gap: 2em;
+    }
 }

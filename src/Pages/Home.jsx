@@ -6,7 +6,7 @@ import CardSection from "../components/CardSection";
 
 function Home({datas}) {
 
-const BannerTitle = 'TRADUCTION - WEB DESIGN - FORMATION'
+const BannerTitle = 'TRADUCTION - WEB git staDESIGN - FORMATION'
 const textBanner = 'Un service humain avant tout'
 
   return (
