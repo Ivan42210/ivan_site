@@ -37,6 +37,10 @@
     color: var(--primary);
 }
 
+.card-text {
+    font-weight: 500;
+}
+
 .card-btn {
     width: 150px;
     height: 100%;

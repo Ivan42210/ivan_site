@@ -7,7 +7,8 @@ import Footer from './components/Footer'
 import About from './Pages/About'
 import Services from './Pages/Services'
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom'
-import { services} from './datas/datas'
+import { services, introduction } from './datas/datas'
+
 
 
 
@@ -16,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Router>
     <Header />
     <Routes>
-    <Route exact path='/' element={<Home datas={services}/>}/>
+    <Route exact path='/' element={<Home datas={services} dataHome={introduction}/>}/>
     <Route exact path='/services/:name' element={<Services />}/>
     <Route exact path='/a-propos' element={<About />}/>
     </Routes>

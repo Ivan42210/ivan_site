@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 
 function Card({service}){
+    
 
     return(
         <div className="card">
@@ -17,4 +18,7 @@ function Card({service}){
     )
 }
 
+
 export default Card;
+
+

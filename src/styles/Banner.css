@@ -1,9 +1,9 @@
 .banner {
-    border-radius: 10px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: end;
-    height: 450px;
+    height: 600px;
     position: relative;
     overflow: hidden;
 }
@@ -15,6 +15,8 @@
     right: 0;
     top: 0;
     z-index: 0;
+    object-fit: cover;
+    width: 100%;
 }
 
 .banner-logo {
@@ -30,17 +32,24 @@
 }
 
 .banner-text {
-    z-index: 12;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 17px;
 }
 
+.banner-caption {
+    z-index: 12;
+}
+
 @media (max-width: 600px) {
+    .banner-image {
+        height: 100%;
+        filter: brightness(60%);
+    }
     .banner {
         width: 100%;
         border-radius: 0;
-        height: 495px;
+        height: 500px;
     }
 }
